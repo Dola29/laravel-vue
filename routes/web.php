@@ -11,10 +11,12 @@
 |
 */
 
+use App\User;
 Route::get('/', function () {
     return view('welcome');
 });
 
 Route::get('users', function(){
-    return ['Lynda','Isabella','Italo','Abel','Diana'];
+    $users = User::orderBy('id','DESC')->take(5)->get();
+    return $users;
 });

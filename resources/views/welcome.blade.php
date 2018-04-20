@@ -15,7 +15,7 @@
                 <h1>VueJS - Laravel</h1>
                 <ul class="list-group">
                     <li class="list-group-item" v-for="item in lists">
-                        
+                        @{{item.name}} - <strong>@{{item.email}}</strong>
                     </li>
                 </ul>
             </div>
